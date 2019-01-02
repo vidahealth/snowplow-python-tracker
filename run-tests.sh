@@ -2,7 +2,7 @@
 
 # Run the Snowplow Tracker test suite.
 
-# Quit on failure
+# Quit on failure.
 set -e
 
 # Need to execute from this dir
@@ -56,23 +56,23 @@ function deploy {
 
 
 function run_tests {
-  
+
   pyenv activate tracker27
   pytest -s
   source deactivate
-  
+
   pyenv activate tracker33
   pytest
   source deactivate
-  
+
   pyenv activate tracker34
   pytest
   source deactivate
-  
+
   pyenv activate tracker35
   pytest
-  source deactivate 
-}  
+  source deactivate
+}
 
 
 case "$1" in
